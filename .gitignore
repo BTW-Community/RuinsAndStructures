@@ -1,5 +1,7 @@
 src deco/
 
+reobf/
+
 src/minecraft/net/minecraft/server/
 src/minecraft_server/net/minecraft/server/
 
@@ -9,7 +11,11 @@ src/minecraft/net/minecraft/src/Addon*
 src/minecraft_server/net/minecraft/src/Addon*
 
 src/minecraft/net/minecraft/src/Block.java
+src/minecraft/net/minecraft/src/BlockAnvil.java
+src/minecraft/net/minecraft/src/ComponentVillage.java
 src/minecraft/net/minecraft/src/EntityList.java
+src/minecraft/net/minecraft/src/FCEntityVillager.java
+src/minecraft/net/minecraft/src/FCEntityZombie.java
 src/minecraft/net/minecraft/src/FCItemSign.java
 src/minecraft/net/minecraft/src/FCItemStone.java
 src/minecraft/net/minecraft/src/FCItemButton.java
@@ -18,9 +24,14 @@ src/minecraft/net/minecraft/src/NetClientHandler.java
 src/minecraft/net/minecraft/src/RenderGlobal.java
 src/minecraft/net/minecraft/src/ServerCommandManager.java
 src/minecraft/net/minecraft/src/ServerConfigurationManager.java
+src/minecraft/net/minecraft/src/World.java
 
 src/minecraft_server/net/minecraft/src/Block.java
+src/minecraft_server/net/minecraft/src/BlockAnvil.java
+src/minecraft_server/net/minecraft/src/ComponentVillage.java
 src/minecraft_server/net/minecraft/src/EntityList.java
+src/minecraft_server/net/minecraft/src/FCEntityVillager.java
+src/minecraft_server/net/minecraft/src/FCEntityZombie.java
 src/minecraft_server/net/minecraft/src/FCItemSign.java
 src/minecraft_server/net/minecraft/src/FCItemStone.java
 src/minecraft_server/net/minecraft/src/FCItemButton.java
@@ -29,6 +40,7 @@ src/minecraft_server/net/minecraft/src/NetClientHandler.java
 src/minecraft_server/net/minecraft/src/RenderGlobal.java
 src/minecraft_server/net/minecraft/src/ServerCommandManager.java
 src/minecraft_server/net/minecraft/src/ServerConfigurationManager.java
+src/minecraft_server/net/minecraft/src/World.java
 
 src/minecraft/net/minecraft/src/BlockPane.java
 src/minecraft/net/minecraft/src/ContainerRepair.java
