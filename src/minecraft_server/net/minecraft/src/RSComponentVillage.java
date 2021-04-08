@@ -3,15 +3,15 @@ package net.minecraft.src;
 import java.util.List;
 import java.util.Random;
 
-abstract class ComponentVillage extends StructureComponent
+abstract class RSComponentVillage extends RSStructureComponent
 {
     /** The number of villagers that have been spawned in this component. */
     private int villagersSpawned;
 
     /** The starting piece of the village. */
-    protected ComponentVillageStartPiece startPiece;
+    protected RSComponentVillageStartPiece startPiece;
 
-    protected ComponentVillage(ComponentVillageStartPiece par1ComponentVillageStartPiece, int par2)
+    protected RSComponentVillage(RSComponentVillageStartPiece par1ComponentVillageStartPiece, int par2)
     {
         super(par2);
         this.startPiece = par1ComponentVillageStartPiece;
@@ -20,7 +20,7 @@ abstract class ComponentVillage extends StructureComponent
     /**
      * Gets the next village component, with the bounding box shifted -1 in the X and Z direction.
      */
-    protected StructureComponent getNextComponentNN(ComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5)
+    protected StructureComponent getNextComponentNN(RSComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5)
     {
         switch (this.coordBaseMode)
         {
@@ -44,7 +44,7 @@ abstract class ComponentVillage extends StructureComponent
     /**
      * Gets the next village component, with the bounding box shifted +1 in the X and Z direction.
      */
-    protected StructureComponent getNextComponentPP(ComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5)
+    protected StructureComponent getNextComponentPP(RSComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5)
     {
         switch (this.coordBaseMode)
         {
@@ -185,39 +185,6 @@ abstract class ComponentVillage extends StructureComponent
      */
     protected int getBiomeSpecificBlock(int par1, int par2)
     {
-        if (this.startPiece.inDesert)
-        {
-            if (par1 == Block.wood.blockID)
-            {
-                return Block.sandStone.blockID;
-            }
-
-            if (par1 == Block.cobblestone.blockID)
-            {
-                return Block.sandStone.blockID;
-            }
-
-            if (par1 == Block.planks.blockID)
-            {
-                return Block.sandStone.blockID;
-            }
-
-            if (par1 == Block.stairsWoodOak.blockID)
-            {
-                return Block.stairsSandStone.blockID;
-            }
-
-            if (par1 == Block.stairsCobblestone.blockID)
-            {
-                return Block.stairsSandStone.blockID;
-            }
-
-            if (par1 == Block.gravel.blockID)
-            {
-                return Block.sandStone.blockID;
-            }
-        }
-
         return par1;
     }
 
@@ -226,24 +193,6 @@ abstract class ComponentVillage extends StructureComponent
      */
     protected int getBiomeSpecificBlockMetadata(int par1, int par2)
     {
-        if (this.startPiece.inDesert)
-        {
-            if (par1 == Block.wood.blockID)
-            {
-                return 0;
-            }
-
-            if (par1 == Block.cobblestone.blockID)
-            {
-                return 0;
-            }
-
-            if (par1 == Block.planks.blockID)
-            {
-                return 2;
-            }
-        }
-
         return par2;
     }
 
